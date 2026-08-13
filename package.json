@@ -1,20 +1,19 @@
 {
-  "name": "detective",
-  "description": "find all require() calls by walking the AST",
+  "name": "@unabandoned/detective",
   "version": "5.2.1",
-  "author": {
-    "name": "James Halliday",
-    "email": "mail@substack.net",
-    "url": "http://substack.net"
-  },
+  "description": "find all require() calls by walking the AST",
+  "main": "index.js",
   "bin": "bin/detective.js",
-  "dependencies": {
-    "acorn-node": "^1.8.2",
-    "defined": "^1.0.0",
-    "minimist": "^1.2.6"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unabandoned/detective.git"
   },
+  "bugs": {
+    "url": "https://github.com/unabandoned/detective/issues"
+  },
+  "homepage": "https://github.com/unabandoned/detective#readme",
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=22.12"
   },
   "keywords": [
     "analyze",
@@ -22,17 +21,23 @@
     "require",
     "source"
   ],
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/browserify/detective.git"
-  },
-  "scripts": {
-    "tests-only": "tape test/*.js",
-    "test": "npm run tests-only"
+  "dependencies": {
+    "acorn": "8.18.0",
+    "acorn-walk": "8.3.5",
+    "minimist": "1.2.8"
   },
   "devDependencies": {
-    "tape": "^5.6.1"
-  }
+    "@commitlint/cli": "21.2.1",
+    "@commitlint/config-conventional": "21.2.0"
+  },
+  "scripts": {
+    "prepare": "git config core.hooksPath .githooks || true",
+    "test": "node --test test/*.js"
+  },
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
 }

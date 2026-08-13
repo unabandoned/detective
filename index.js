@@ -1,19 +1,34 @@
-var acorn = require('acorn-node');
-var walk = require('acorn-node/walk');
-var defined = require('defined');
+var acorn = require('acorn');
+var walk = require('acorn-walk');
 
 var requireRe = /\brequire\b/;
+
+// defined(): the first argument that is not undefined. Previously the `defined`
+// package; inlined here to drop a runtime dependency (and the transitive copy
+// that consumers dragged in through detective).
+function defined () {
+    for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] !== undefined) return arguments[i];
+    }
+}
 
 function parse (src, opts) {
     if (!opts) opts = {};
     var acornOpts = {
+        // Defaults acorn-node used to supply out of the box. acorn 8 with
+        // ecmaVersion 'latest' natively parses everything acorn-node's bundled
+        // plugins added (bigint, class fields, static class features, numeric
+        // separators, import.meta, `export * as ns from`), so no plugins are
+        // needed — we call acorn directly.
+        ecmaVersion: 'latest',
+        allowHashBang: true,
+        allowReturnOutsideFunction: true,
         ranges: defined(opts.ranges, opts.range),
         locations: defined(opts.locations, opts.loc),
         allowReserved: defined(opts.allowReserved, true),
         allowImportExportEverywhere: defined(opts.allowImportExportEverywhere, false)
     };
 
-    // Use acorn-node's defaults for the rest.
     if (opts.ecmaVersion != null) acornOpts.ecmaVersion = opts.ecmaVersion;
     if (opts.sourceType != null) acornOpts.sourceType = opts.sourceType;
     if (opts.allowHashBang != null) acornOpts.allowHashBang = opts.allowHashBang;
@@ -28,24 +43,24 @@ var exports = module.exports = function (src, opts) {
 
 exports.find = function (src, opts) {
     if (!opts) opts = {};
-    
+
     var word = opts.word === undefined ? 'require' : opts.word;
     if (typeof src !== 'string') src = String(src);
-    
+
     var isRequire = opts.isRequire || function (node) {
         return node.callee.type === 'Identifier'
             && node.callee.name === word
         ;
     };
-    
+
     var modules = { strings : [], expressions : [] };
     if (opts.nodes) modules.nodes = [];
-    
+
     var wordRe = word === 'require' ? requireRe : RegExp('\\b' + word + '\\b');
     if (!wordRe.test(src)) return modules;
-    
+
     var ast = parse(src, opts.parse);
-    
+
     function visit(node, st, c) {
         var hasRequire = wordRe.test(src.slice(node.start, node.end));
         if (!hasRequire) return;
@@ -70,11 +85,11 @@ exports.find = function (src, opts) {
             if (opts.nodes) modules.nodes.push(node);
         }
     }
-    
+
     walk.recursive(ast, null, {
         Statement: visit,
         Expression: visit
     });
-    
+
     return modules;
 };
