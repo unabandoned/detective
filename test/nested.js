@@ -1,4 +1,4 @@
-var test = require('tape');
+var test = require('./tap-adapter');
 var detective = require('../');
 var fs = require('fs');
 var src = fs.readFileSync(__dirname + '/files/nested.js');
