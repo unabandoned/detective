@@ -1,0 +1,23 @@
+schema: 1
+
+package: "@unabandoned/detective"
+
+upstream:
+  repo: browserify/detective
+  reason: "unmaintained upstream in the browserify ecosystem — left idle while its dependency tree ages"
+
+summary: >-
+  Finds all require() calls in a JavaScript source file by walking its AST,
+  without executing the code.
+
+why-forked: >-
+  A core browserify analysis helper that went unmaintained while its dependency
+  tree aged; forked so Renovate keeps that tree current for consumers.
+
+status: active
+
+used-by:
+  - consumer: "@unabandoned/module-deps"
+    purpose: "Extracts require() targets from each module while building the graph."
+
+tags: [browserify, ast, require, static-analysis]
