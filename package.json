@@ -1,6 +1,6 @@
 {
   "name": "@unabandoned/detective",
-  "version": "5.2.3",
+  "version": "5.2.4",
   "description": "find all require() calls by walking the AST",
   "main": "index.js",
   "bin": "bin/detective.js",
