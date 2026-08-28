@@ -5,6 +5,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## x.y.z - unreleased
 * update acorn-node to 1.8.2 (make use of acorn 7.x)
 
+## [5.2.4](https://github.com/unabandoned/detective/compare/detective-v5.2.3...detective-v5.2.4) (2026-08-28)
+
+
+### Dependencies & maintenance
+
+* add .unabandoned.yml dashboard metadata ([#11](https://github.com/unabandoned/detective/issues/11)) ([51c64f8](https://github.com/unabandoned/detective/commit/51c64f84eff21248a0c780a3cdf12a184e551189))
+* **deps:** update commitlint monorepo to v21.2.2 ([#13](https://github.com/unabandoned/detective/issues/13)) ([897f7ac](https://github.com/unabandoned/detective/commit/897f7acfeba246071650aee2c14fd791ea74bf4c))
+* **deps:** update unabandoned/.github action to v1.0.1 ([#14](https://github.com/unabandoned/detective/issues/14)) ([7b9c7a4](https://github.com/unabandoned/detective/commit/7b9c7a4e15a308f2e65331fd1c02c07897ba23ad))
+* **deps:** update unabandoned/.github action to v1.0.2 ([#15](https://github.com/unabandoned/detective/issues/15)) ([09f8b74](https://github.com/unabandoned/detective/commit/09f8b74ea0b86795de89ae4c9f1eb14006f00ef1))
+* **deps:** update unabandoned/.github action to v1.0.3 ([#16](https://github.com/unabandoned/detective/issues/16)) ([e276d39](https://github.com/unabandoned/detective/commit/e276d39c31294a928ec82615dfae228dfb77452b))
+* **deps:** update unabandoned/.github digest to 6be3bc5 ([#8](https://github.com/unabandoned/detective/issues/8)) ([da9039e](https://github.com/unabandoned/detective/commit/da9039e8f8f0b7111113747f7180f4f6938ddcca))
+* **deps:** update unabandoned/.github digest to 88ce617 ([#10](https://github.com/unabandoned/detective/issues/10)) ([bb4931c](https://github.com/unabandoned/detective/commit/bb4931c581686f8b841438ad63f2df46bb9cb110))
+* pin reusable workflows to the @unabandoned/.github v1.0.0 release ([#12](https://github.com/unabandoned/detective/issues/12)) ([a4acd80](https://github.com/unabandoned/detective/commit/a4acd800f53cd770164c6bd9f5a5fde599be7b36))
+
 ## [5.2.3](https://github.com/unabandoned/detective/compare/detective-v5.2.2...detective-v5.2.3) (2026-08-13)
 
 
