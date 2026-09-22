@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## x.y.z - unreleased
 * update acorn-node to 1.8.2 (make use of acorn 7.x)
 
+## [5.2.5](https://github.com/unabandoned/detective/compare/detective-v5.2.4...detective-v5.2.5) (2026-09-22)
+
+
+### Dependencies & maintenance
+
+* **deps:** update unabandoned/.github action to v1.0.4 ([#17](https://github.com/unabandoned/detective/issues/17)) ([6187a60](https://github.com/unabandoned/detective/commit/6187a60c653783b431ec111695e0c7e8eece5775))
+* **deps:** update unabandoned/.github action to v1.0.5 ([#18](https://github.com/unabandoned/detective/issues/18)) ([d83ff93](https://github.com/unabandoned/detective/commit/d83ff93bdcf3858e917a9e537b126f208842ddb8))
+* **deps:** update unabandoned/.github action to v1.1.0 ([#20](https://github.com/unabandoned/detective/issues/20)) ([d12f9e8](https://github.com/unabandoned/detective/commit/d12f9e8cf75bdfb30b9ffc51561c9821ce423ce7))
+
 ## [5.2.4](https://github.com/unabandoned/detective/compare/detective-v5.2.3...detective-v5.2.4) (2026-08-28)
 
 
