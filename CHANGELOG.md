@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## x.y.z - unreleased
 * update acorn-node to 1.8.2 (make use of acorn 7.x)
 
+## [5.2.6](https://github.com/unabandoned/detective/compare/detective-v5.2.5...detective-v5.2.6) (2026-09-23)
+
+
+### Dependencies & maintenance
+
+* **deps:** update commitlint monorepo to v21.2.3 ([#21](https://github.com/unabandoned/detective/issues/21)) ([622cc96](https://github.com/unabandoned/detective/commit/622cc960c93a6356524732532bf6c323deca2f6a))
+
 ## [5.2.5](https://github.com/unabandoned/detective/compare/detective-v5.2.4...detective-v5.2.5) (2026-09-22)
 
 
