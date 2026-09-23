@@ -1,6 +1,11 @@
 {
   "name": "@unabandoned/detective",
   "version": "5.2.6",
+  "files": [
+    "CHANGELOG.md",
+    "index.js",
+    "bin"
+  ],
   "description": "find all require() calls by walking the AST",
   "main": "index.js",
   "bin": "bin/detective.js",
