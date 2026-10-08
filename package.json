@@ -27,7 +27,7 @@
     "source"
   ],
   "dependencies": {
-    "acorn": "8.18.0",
+    "acorn": "8.19.0",
     "acorn-walk": "8.3.5",
     "minimist": "1.2.8"
   },
