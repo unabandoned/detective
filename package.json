@@ -1,6 +1,6 @@
 {
   "name": "@unabandoned/detective",
-  "version": "5.2.6",
+  "version": "5.2.7",
   "files": [
     "CHANGELOG.md",
     "index.js",
